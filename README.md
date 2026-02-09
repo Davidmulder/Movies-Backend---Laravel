@@ -1,9 +1,9 @@
-🎬 Movies Backend 
+### 🎬 Movies Backend 
 
 Este projeto foi desenvolvido como parte do Teste Back-end – Parte 2, com foco na integração via backend com uma API externa e disponibilização de dados paginados para consumo em interface de grid.
 
-🎯 Objetivo 
-
+### 🎯 Objetivo 
+```sh
 Listar filmes em grid, contendo:
 
 Título
@@ -31,9 +31,9 @@ Blade (para demo visual)
 Bootstrap 5 (CDN)
 
 RapidAPI – MoviesDatabase
-
-🧱 Arquitetura da Solução
-
+```
+### 🧱 Arquitetura da Solução
+```sh
 A aplicação foi estruturada seguindo boas práticas de separação de responsabilidades:
 
 Controller
@@ -56,9 +56,9 @@ Implementado apenas para demonstrar o funcionamento do grid e da paginação
 
 Consome exclusivamente o endpoint interno /api/titles
 
-⚠️ Em nenhum momento o frontend acessa diretamente a RapidAPI.
+### ⚠️ Em nenhum momento o frontend acessa diretamente a RapidAPI.
 
-🔌 Integração com a RapidAPI
+## 🔌 Integração com a RapidAPI
 
 Endpoint utilizado:
 
@@ -78,8 +78,9 @@ RAPIDAPI_KEY=YOUR_RAPIDAPI_KEY
 RAPIDAPI_HOST=moviesdatabase.p.rapidapi.com
 RAPIDAPI_BASE_URL=https://moviesdatabase.p.rapidapi.com
 RAPIDAPI_TIMEOUT=10
-
-📄 Endpoint Backend Disponível
+```
+### 📄 Endpoint Backend Disponível
+```sh
 Listar títulos (com paginação)
 GET /api/titles?page=1
 
@@ -113,9 +114,9 @@ total → total informado pela API externa (quando disponível)
 count → quantidade real de itens retornados nesta página
 
 items → lista de filmes para o grid
-
-🔁 Paginação
-
+```
+### 🔁 Paginação
+```sh
 A API externa nem sempre fornece metadados claros de paginação.
 Por isso, foi implementado um fallback inteligente:
 
@@ -125,7 +126,9 @@ Quando uma página retorna zero itens, a paginação é interrompida
 
 Isso garante uma experiência de navegação consistente no frontend.
 
-🖼️ Tratamento de Imagens
+```
+
+### 🖼️ Tratamento de Imagens
 
 Algumas imagens retornadas pela API (hospedadas em m.media-amazon.com) podem não ser exibidas devido a políticas de hotlink / CORS do provedor externo.
 
@@ -143,7 +146,7 @@ Funciona offline
 
 Evita problemas de bloqueio por rede, CORS ou adblock
 
-🧪 Demo Visual (Grid)
+### 🧪 Demo Visual (Grid)
 
 Para demonstrar o funcionamento do backend, foi criada uma view simples em Blade:
 
@@ -162,8 +165,8 @@ Implementa loading, mensagens de erro e fallback de imagem
 
 ⚠️ A view existe apenas para demonstração técnica do teste.
 
-▶️ Como executar o projeto
-
+### ▶️ Como executar o projeto
+```sh
 Clonar o repositório
 
 Instalar dependências:
@@ -183,9 +186,9 @@ Acessar:
 API: http://127.0.0.1:8000/api/titles?page=1
 
 Demo Grid: http://127.0.0.1:8000/movies
-
-✅ Conclusão
-
+```
+### ✅ Conclusão
+```sh
 O objetivo do Teste Back-end – Parte 2 foi integralmente atendido:
 
 ✔️ Integração via backend com API externa
@@ -199,3 +202,4 @@ O objetivo do Teste Back-end – Parte 2 foi integralmente atendido:
 ✔️ Tratamento de falhas de imagem
 
 ✔️ Demonstração funcional do resultado
+```
